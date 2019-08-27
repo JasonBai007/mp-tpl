@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "Hello",
+  "usingComponents": {
+    "van-nav-bar": "vant-weapp/nav-bar",
+    "van-tabbar": "vant-weapp/tabbar",
+    "van-tabbar-item": "vant-weapp/tabbar-item",
+    "van-tab": "vant-weapp/tab",
+    "van-tabs": "vant-weapp/tabs"
+  }
+}
