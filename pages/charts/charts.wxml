@@ -1,9 +1,9 @@
 <view class="container">
   <van-tabs active="{{ active }}" bind:change="onChange">
-    <van-tab title="折线图">内容 1</van-tab>
-    <van-tab title="柱状图">内容 2</van-tab>
-    <van-tab title="雷达图">内容 3</van-tab>
-    <van-tab title="散点图">内容 4</van-tab>
+    <van-tab title="折线图"></van-tab>
+    <van-tab title="柱状图"></van-tab>
+    <van-tab title="雷达图"></van-tab>
+    <van-tab title="散点图"></van-tab>
   </van-tabs>
   <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
 </view>
