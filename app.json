@@ -1,13 +1,47 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/form/form",
+    "pages/charts/charts",
     "pages/bar/bar",
-    "pages/logs/logs"
+    "pages/about/about"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "Hello Mini Program",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "selectedColor":"#25ae88",
+        "iconPath": "assets/img/home.png",
+        "selectedIconPath": "assets/img/home2.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedColor":"#25ae88",
+        "iconPath": "assets/img/form.png",
+        "selectedIconPath": "assets/img/form2.png",
+        "pagePath": "pages/form/form",
+        "text": "表单"
+      },
+      {
+        "selectedColor":"#25ae88",
+        "iconPath": "assets/img/charts.png",
+        "selectedIconPath": "assets/img/charts2.png",
+        "pagePath": "pages/charts/charts",
+        "text": "图表"
+      },
+      {
+        "selectedColor":"#25ae88",
+        "iconPath": "assets/img/about.png",
+        "selectedIconPath": "assets/img/about2.png",
+        "pagePath": "pages/about/about",
+        "text": "个人中心"
+      }
+    ]
   }
 }
