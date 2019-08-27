@@ -39,12 +39,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "bar",
-					"pathName": "pages/bar/bar",
+					"id": 0,
+					"name": "form",
+					"pathName": "pages/form/form",
 					"query": "",
 					"scene": null
 				},
@@ -52,6 +52,7 @@
 					"id": -1,
 					"name": "chart",
 					"pathName": "pages/charts/charts",
+					"query": "",
 					"scene": null
 				}
 			]

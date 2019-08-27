@@ -1,1 +1,11 @@
 /* pages/form/form.wxss */
+
+.container {
+  background: #f0f3f6;
+}
+
+.sel-wrap text{
+  display: block;
+  padding: 20rpx;
+  font-size: 14px;
+}

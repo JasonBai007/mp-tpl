@@ -1,4 +1,11 @@
 <!--pages/form/form.wxml-->
 <view class="container">
   <van-nav-bar safe-area-inset-top="{{ false }}" title="筛选条件" left-text="返回" right-text="首页" left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight" />
+  <view class='sel-wrap'>
+    <text>选择维度</text>
+    <van-cell title="年份" bind:click="selYear" value="{{ year }}" is-link />
+    <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+      <van-picker show-toolbar columns="{{ columns }}" bind:change="onChange" bind:cancel="onCancel" bind:confirm="onConfirm" />
+    </van-popup>
+  </view>
 </view>
