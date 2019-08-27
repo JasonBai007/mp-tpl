@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/form/form",
     "pages/charts/charts",
-    "pages/bar/bar",
     "pages/about/about"
   ],
   "window": {

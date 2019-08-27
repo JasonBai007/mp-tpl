@@ -1,2 +1,4 @@
 <!--pages/form/form.wxml-->
-<text>pages/form/form.wxml</text>
+<view class="container">
+  <van-nav-bar safe-area-inset-top="{{ false }}" title="筛选条件" left-text="返回" right-text="首页" left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight" />
+</view>

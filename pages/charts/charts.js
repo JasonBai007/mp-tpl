@@ -1,66 +1,102 @@
-// pages/charts/charts.js
+import * as echarts from '../../ec-canvas/echarts';
+
+let chart = null;
+
+function initChart(canvas, width, height) {
+  chart = echarts.init(canvas, null, {
+    width: width,
+    height: height
+  });
+  canvas.setChart(chart);
+
+  var symbolSize = 20;
+  var data = [
+    [15, 0],
+    [-50, 10],
+    [-56.5, 20],
+    [-46.5, 30],
+    [-22.1, 40]
+  ];
+
+  var option = {
+    title: {
+      text: 'Try Dragging these Points'
+    },
+    tooltip: {
+      triggerOn: 'none',
+      formatter: function(params) {
+        return 'X: ' + params.data[0].toFixed(2) + '<br>Y: ' + params.data[1].toFixed(2);
+      }
+    },
+    grid: {},
+    xAxis: {
+      min: -100,
+      max: 80,
+      type: 'value',
+      axisLine: {
+        onZero: false
+      }
+    },
+    yAxis: {
+      min: -30,
+      max: 60,
+      type: 'value',
+      axisLine: {
+        onZero: false
+      }
+    },
+    dataZoom: [{
+        type: 'slider',
+        xAxisIndex: 0,
+        filterMode: 'empty'
+      },
+      {
+        type: 'slider',
+        yAxisIndex: 0,
+        filterMode: 'empty'
+      },
+      {
+        type: 'inside',
+        xAxisIndex: 0,
+        filterMode: 'empty'
+      },
+      {
+        type: 'inside',
+        yAxisIndex: 0,
+        filterMode: 'empty'
+      }
+    ],
+    series: [{
+      id: 'a',
+      type: 'line',
+      smooth: true,
+      symbolSize: symbolSize,
+      data: data
+    }]
+  };
+
+  chart.setOption(option);
+  return chart;
+}
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    active: 0,
+    ec: {
+      onInit: initChart
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onReady() {},
+  onChange(event) {
+    this.setData({
+      ec: {
+        onInit:initChart
+      }
+    })
+    wx.showToast({
+      title: `切换到标签 ${event.detail.index + 1}`,
+      icon: 'none'
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+});

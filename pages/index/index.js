@@ -4,49 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    active: 0,
-    active2: 1,
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  onClickLeft() {
-    wx.showToast({
-      title: '点击返回',
-      icon: 'none'
-    });
-  },
-  onClickRight() {
-    wx.showToast({
-      title: '点击按钮',
-      icon: 'none'
-    });
-  },
-  // event.detail 的值为当前选中项的索引
-  onChange(event) {
-    this.setData({
-      active: event.detail
-    })
-    console.log(event.detail);
-  },
-  onChange2(event) {
-    wx.showToast({
-      title: `切换到标签 ${event.detail.index + 1}`,
-      icon: 'none'
-    });
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  //事件处理函数
-  gotoBar: function() {
-    wx.navigateTo({
-      url: '../bar/bar'
-    })
   },
   onLoad: function() {
     if (app.globalData.userInfo) {
