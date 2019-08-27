@@ -39,18 +39,11 @@ Page({
 
   genLineOption() {
     return {
-      color: ['#37a2da', '#32c5e9', '#67e0e3'],
       title: {
         text: '折线图',
         left: 'center',
         top: 20
-      },
-      grid: {
-        top: 70,
-        left: 40,
-        right: 30,
-        bottom: 85
-      },
+      },      
       xAxis: {
         type: 'category',
         boundaryGap: false,
@@ -69,18 +62,11 @@ Page({
 
   genBarOption() {
     return {
-      color: ['#37a2da', '#32c5e9', '#67e0e3'],
       title: {
         text: '柱状图',
         left: 'center',
         top: 20
-      },
-      grid: {
-        top: 70,
-        left: 40,
-        right: 30,
-        bottom: 85
-      },
+      },      
       xAxis: {
         type: 'category',
         data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -97,17 +83,10 @@ Page({
 
   genRadarOption() {
     return {
-      color: ['#37a2da', '#32c5e9', '#67e0e3'],
       title: {
         text: '雷达图',
         left: 'center',
         top: 20
-      },
-      grid: {
-        top: 0,
-        left: 100,
-        right: 100,
-        bottom: 85
       },
       radar: {
         // shape: 'circle',
@@ -164,17 +143,10 @@ Page({
 
   genScatterOption() {
     return {
-      color: ['#37a2da', '#32c5e9', '#67e0e3'],
       title: {
         text: '散点图',
         left: 'center',
         top: 20
-      },
-      grid: {
-        top: 70,
-        left: 40,
-        right: 30,
-        bottom: 85
       },
       xAxis: {},
       yAxis: {},

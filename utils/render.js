@@ -1,7 +1,7 @@
 // 渲染图表函数
 import * as echarts from '../ec-canvas/echarts';
 
-function renderChart(domNode, opts) {
+function renderChart(domNode, options) {
   domNode.init((canvas, width, height) => {
     // 获取组件的 canvas、width、height 后的回调函数
     // 在这里初始化图表
@@ -9,6 +9,19 @@ function renderChart(domNode, opts) {
       width: width,
       height: height
     });
+
+    // 默认配置
+    const opts = {
+      color: ['#37a2da', '#32c5e9', '#67e0e3'],
+      grid: {
+        top: 70,
+        left: 40,
+        right: 30,
+        bottom: 85
+      },
+    }
+    // 合并配置
+    Object.assign(opts, options)
 
     // 导入配置
     chart.setOption(opts);
@@ -21,4 +34,6 @@ function renderChart(domNode, opts) {
   });
 }
 
-module.exports.renderChart = renderChart
+module.exports = {
+  renderChart
+}
