@@ -1,6 +1,11 @@
 /**app.wxss**/
+
 .container {
-  height: 100vh;  
+  height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
-} 
+}
+
+.van-tabs__line {
+  background-color: #37a2da !important;
+}
