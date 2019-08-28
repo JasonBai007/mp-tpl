@@ -4,44 +4,55 @@ const app = getApp()
 
 Page({
   data: {
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    list: [{
+      title: '模块一',
+      id: 'module1',
+      isAbled: true,
+      icon: 'location'
+    }, {
+      title: '模块二',
+      id: 'module2',
+      isAbled: true,
+      icon: 'like'
+    }, {
+      title: '模块三',
+      id: 'module3',
+      isAbled: true,
+      icon: 'star'
+    }, {
+      title: '模块四',
+      id: 'module4',
+      isAbled: true,
+      icon: 'phone'
+    }, {
+      title: '模块五',
+      id: 'module5',
+      isAbled: true,
+      icon: 'setting'
+    }, {
+      title: '模块六',
+      id: 'module6',
+      isAbled: true,
+      icon: 'fire'
+    }, {
+      title: '模块七',
+      id: 'module7',
+      isAbled: true,
+      icon: 'coupon'
+    }, {
+      title: '模块八',
+      id: 'module8',
+      isAbled: true,
+      icon: 'cart'
+    }, {
+      title: '模块九',
+      id: 'module9',
+      isAbled: true,
+      icon: 'friends'
+    }]
   },
   onLoad: function() {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+
   }
+
 })
