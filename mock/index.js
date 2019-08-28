@@ -1,4 +1,4 @@
-const Mock = require('mock.js')
+const Mock = require('../libs/mock.min.js')
 
 const mockData = Mock.mock({
   code: 0,
