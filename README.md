@@ -15,3 +15,9 @@ a Mini Program Template with Echarts
 
 ## 关于请求的封装
 1. 在 utils/request.js 中封装了请求函数
+
+## 关于云开发
+1. 如果要使用云开发，需要编辑 project.config.json 文件
+2. 将 appid 字段的值改成你实际的id，而不是测试id
+3. 新增 cloudfunctionsRoot 字段: "cloudfunctionRoot": "cloudfunctions/",
+4. 将 app.js 中注释的内容解除注释
