@@ -1,13 +1,24 @@
 // pages/form/form.js
+const {
+  mockData
+} = require('../../mock/index.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    show: false,
-    year: new Date().getFullYear(),
-    columns: [2019, 2018, 2017]
+    list1: [{
+      name: '2019',
+      id: 2019
+    }, {
+      name: '2018',
+      id: 2018
+    }, {
+      name: '2017',
+      id: 2017
+    }],
+    list2: mockData
   },
 
   onClickLeft() {
@@ -21,34 +32,6 @@ Page({
     })
   },
 
-  onClose() {
-    this.setData({
-      show: false
-    });
-  },
-
-  selYear() {
-    this.setData({
-      show: true
-    });
-  },
-
-  onConfirm(event) {
-    const {
-      picker,
-      value,
-      index
-    } = event.detail;
-    this.setData({
-      year: value
-    })
-    this.onClose()
-  },
-
-  onCancel() {
-    this.onClose()
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -60,7 +43,12 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    // wx.request({
+    //   url: 'api/v1/getList',
+    //   success(res) {
+    //     console.log(res.data)
+    //   }
+    // })
   },
 
   /**
