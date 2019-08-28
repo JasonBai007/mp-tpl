@@ -11,3 +11,7 @@ a Mini Program Template with Echarts
 2. [官方示例项目](https://github.com/ecomfe/echarts-for-weixin)
 3. [如果获取数据后再渲染图表](https://github.com/ecomfe/echarts-for-weixin/tree/master/pages/lazyLoad)
 4. [在线定制echarts，去掉不需要的图表源码](https://echarts.baidu.com/builder.html)
+5. 在 utils/render.js 中封装了渲染图表的函数
+
+## 关于请求的封装
+1. 在 utils/request.js 中封装了请求函数
