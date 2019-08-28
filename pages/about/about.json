@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#25ae88",
+  "usingComponents": {
+    "van-cell": "vant-weapp/cell"
+  }
 }

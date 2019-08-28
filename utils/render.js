@@ -12,7 +12,7 @@ function renderChart(domNode, options) {
 
     // 默认配置
     const opts = {
-      color: ['#37a2da', '#32c5e9', '#67e0e3'],
+      color: ['#25ae88', '#32c5e9', '#67e0e3'],
       grid: {
         top: 70,
         left: 40,

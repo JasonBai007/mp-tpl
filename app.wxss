@@ -8,5 +8,5 @@
 
 /* 覆盖tab组件下划线样式 */
 .van-tabs__line {
-  background-color: #37a2da !important;
+  background-color: #25ae88 !important;
 }

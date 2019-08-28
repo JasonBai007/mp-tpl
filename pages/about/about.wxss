@@ -1,1 +1,29 @@
 /* pages/about/about.wxss */
+
+.avatar {
+  display: block;
+  margin: 30rpx;
+  margin-left: 50rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border: 8rpx solid #5dd4b3;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.value-text {
+  padding-right: 50%;
+  font-size: 20px;
+  color: #fff;
+}
+
+.top.van-cell {
+  background-color: #25ae88;
+  border-radius: 0px 0px 70px 0px / 0px 0px 20px 0px;
+  border-bottom: none !important;
+}
+
+.cell-index--van-cell__right-icon {
+  color:#fff;
+}
+

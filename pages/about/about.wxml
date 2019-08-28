@@ -1,2 +1,7 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<van-cell is-link center="true" custom-class="top">
+  <view slot="title">
+    <open-data type="userAvatarUrl" class="avatar"></open-data>
+  </view>
+  <open-data type="userNickName" class="value-text"></open-data>
+</van-cell>
