@@ -18,7 +18,12 @@ Page({
       name: '2017',
       id: 2017
     }],
-    list2: mockData
+    list2: mockData,
+    region: []
+  },
+
+  onRegionChange(e) {
+    console.log(e.detail)
   },
 
   onClickLeft() {

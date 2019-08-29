@@ -1,0 +1,8 @@
+<!--components/region-selector/region-selector.wxml-->
+<!-- 使用示例： -->
+<!-- <region-selector title="地域" bindregionEvent="onRegionChange"></region-selector> -->
+<view class='selector-wrap'>
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="全部">
+    <van-cell title="{{title}}" value="{{ rightValue }}" is-link value-class="self-right" />
+  </picker>
+</view>

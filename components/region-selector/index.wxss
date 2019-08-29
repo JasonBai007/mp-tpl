@@ -1,0 +1,6 @@
+/* components/region-selector/region-selector.wxss */
+
+.self-right {
+  flex: 3 !important;
+}
+
