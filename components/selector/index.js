@@ -13,7 +13,7 @@ Component({
    */
   data: {
     show: false,
-    rightValue: '',
+    rightValue: '请选择',
   },
 
   /**
