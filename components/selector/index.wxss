@@ -1,4 +1,0 @@
-/* components/selector/index.wxss */
-.selector-wrap {
-  margin-bottom: 15rpx;
-}

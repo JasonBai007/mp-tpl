@@ -22,6 +22,14 @@ Page({
     region: []
   },
 
+  onSingleChangeYear(e) {
+    console.log(e.detail)
+  },
+
+  onSingleChangeInterest(e) {
+    console.log(e.detail)
+  },
+
   onRegionChange(e) {
     console.log(e.detail)
   },

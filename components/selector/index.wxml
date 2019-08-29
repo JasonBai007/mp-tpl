@@ -1,7 +1,0 @@
-<!--components/selector/index.wxml-->
-<view class='selector-wrap'>
-  <van-cell title="{{title}}" bind:click="onClick" value="{{ rightValue }}" is-link />
-  <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
-    <van-picker show-toolbar columns="{{ list }}" bind:change="onChange" value-key="name" bind:cancel="onCancel" bind:confirm="onConfirm" />
-  </van-popup>
-</view>
