@@ -1,0 +1,10 @@
+<!--components/region-selector/region-selector.wxml-->
+<!-- 使用示例： -->
+<!-- <date-selector title="日期" binddateEvent="onDateChange"></date-selector> -->
+<!-- <date-selector title="月份" type="month" binddateEvent="onDateChange"></date-selector> -->
+<!-- <date-selector title="年份" type="year" binddateEvent="onDateChange"></date-selector> -->
+<view class='selector-wrap'>
+  <picker mode="date" bindchange="bindDateChange" value="{{date}}" fields="{{type}}">
+    <van-cell title="{{title}}" value="{{ rightValue }}" is-link value-class="self-right" />
+  </picker>
+</view>

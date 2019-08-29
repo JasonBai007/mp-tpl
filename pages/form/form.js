@@ -8,29 +8,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list1: [{
-      name: '2019',
-      id: 2019
-    }, {
-      name: '2018',
-      id: 2018
-    }, {
-      name: '2017',
-      id: 2017
-    }],
     list2: mockData,
     region: []
-  },
-
-  onSingleChangeYear(e) {
-    console.log(e.detail)
-  },
+  },  
 
   onSingleChangeInterest(e) {
     console.log(e.detail)
   },
 
   onRegionChange(e) {
+    console.log(e.detail)
+  },
+
+  onDateChange(e) {
     console.log(e.detail)
   },
 

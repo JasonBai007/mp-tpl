@@ -4,8 +4,10 @@
   <view class='sel-wrap'>
     <text>选择维度</text>
     <!-- 引入自定义选择器组件 -->
-    <single-selector title="年份" list="{{list1}}" bindsingleEvent="onSingleChangeYear"></single-selector>
     <single-selector title="兴趣" list="{{list2}}" bindsingleEvent="onSingleChangeInterest"></single-selector>
     <region-selector title="地域" bindregionEvent="onRegionChange"></region-selector>
+    <date-selector title="日期" binddateEvent="onDateChange"></date-selector>
+    <date-selector title="月份" type="month" binddateEvent="onDateChange"></date-selector>
+    <date-selector title="年份" type="year" binddateEvent="onDateChange"></date-selector>
   </view>
 </view>

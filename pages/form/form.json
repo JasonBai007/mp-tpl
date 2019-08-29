@@ -2,6 +2,7 @@
   "usingComponents": {
     "van-nav-bar": "vant-weapp/nav-bar",
     "single-selector": "../../components/single-selector",
-    "region-selector": "../../components/region-selector"
+    "region-selector": "../../components/region-selector",
+    "date-selector": "../../components/date-selector"
   }
 }
