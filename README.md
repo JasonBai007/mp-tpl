@@ -1,5 +1,5 @@
-# mp-jeep-galaxy
-a mini-program for jeep-galaxy
+# mp-tpl
+a mini-program template for your project
 
 ## Tech Stack
 1. 原生小程序框架
