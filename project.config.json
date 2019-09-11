@@ -14,9 +14,10 @@
 		"uglifyFileName": false
 	},
 	"compileType": "miniprogram",
+	"cloudfunctionRoot": "cloudfunctions/",
 	"libVersion": "2.8.0",
 	"appid": "wxe605c013ccd01d4d",
-	"projectname": "mp-tpl",
+	"projectname": "mp-jeep-galaxy",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

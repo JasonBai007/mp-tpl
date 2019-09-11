@@ -1,5 +1,5 @@
-# mp-tpl
-a Mini Program Template with Echarts
+# mp-jeep-galaxy
+a mini-program for jeep-galaxy
 
 ## Tech Stack
 1. 原生小程序框架

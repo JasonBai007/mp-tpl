@@ -4,8 +4,20 @@
   background: #f0f3f6;
 }
 
-.sel-wrap text{
+.sel-wrap text {
   display: block;
   padding: 20rpx;
   font-size: 14px;
+}
+
+.search-btn {
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.right-btn {
+  color: #1989fa;
+  font-size: 20px !important;
+  vertical-align: middle;
 }

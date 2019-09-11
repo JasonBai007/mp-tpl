@@ -3,43 +3,14 @@
     "pages/index/index",
     "pages/form/form",
     "pages/charts/charts",
-    "pages/about/about",
-    "pages/detail/detail"
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Hello Mini Program",
+    "navigationBarTitleText": "mp-tpl",
     "navigationBarTextStyle": "black"
   },
-  "tabBar": {
-    "selectedColor": "#25ae88",
-    "list": [
-      {
-        "iconPath": "static/img/home.png",
-        "selectedIconPath": "static/img/home2.png",
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "iconPath": "static/img/form.png",
-        "selectedIconPath": "static/img/form2.png",
-        "pagePath": "pages/form/form",
-        "text": "表单"
-      },
-      {
-        "iconPath": "static/img/charts.png",
-        "selectedIconPath": "static/img/charts2.png",
-        "pagePath": "pages/charts/charts",
-        "text": "图表"
-      },
-      {
-        "iconPath": "static/img/about.png",
-        "selectedIconPath": "static/img/about2.png",
-        "pagePath": "pages/about/about",
-        "text": "个人中心"
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap24.json"
+  "resizable": true,
+  "sitemapLocation": "sitemap.json"
 }

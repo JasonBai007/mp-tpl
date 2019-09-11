@@ -1,5 +1,9 @@
 /* pages/bar/bar.wxss */
 
+.container {
+  background: #fff;
+}
+
 .ec-canvas {
   width: 100%;
   height: 50%;

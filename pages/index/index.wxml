@@ -1,7 +1,23 @@
 <!--index.wxml-->
-<view class="page-wrap">
-  <navigator url="../detail/detail?fatherId={{item.id}}" class='item' wx:for="{{list}}" wx:key="{{index}}">
-    <van-icon name="{{item.icon}}" class='inner-icon' />
-    <text>{{item.title}}</text>
-  </navigator>
+<view class="container">
+  <view class="item-wrap">
+    <!-- <navigator url="../form/form?moduleId=competition&moduleName=竞争格局" class='item' style="width:100%">
+      <van-icon name="cluster" class='inner-icon' />
+      <text>竞争格局</text>
+    </navigator> -->
+    <navigator class='item' style="width:100%" bindtap="showMsg">
+      <van-icon name="cluster" class='inner-icon disabled-icon' />
+      <text>竞争格局</text>
+    </navigator>
+    <block wx:for="{{list}}" wx:key="{{index}}">
+      <navigator url="../form/form?moduleId={{item.id}}&moduleName={{item.title}}" class='item' wx:if="{{item.isAbled}}">
+        <van-icon name="{{item.icon}}" class='inner-icon' />
+        <text>{{item.title}}</text>
+      </navigator>
+      <navigator class='item' wx:else bindtap="showMsg">
+        <van-icon name="{{item.icon}}" class='inner-icon disabled-icon' />
+        <text>{{item.title}}</text>
+      </navigator>
+    </block>
+  </view>
 </view>

@@ -1,0 +1,11 @@
+<!--components/model-selector-multiple/index.wxml-->
+<view class="multi-wrap">
+  <text>{{title}}</text>
+  <van-checkbox-group value="{{ result }}" bind:change="onChange">
+    <van-cell-group>
+      <van-cell wx:for="{{ list }}" wx:key="index" title="{{item.name}}" value-class="value-class" clickable data-index="{{ index }}" bind:click="toggle">
+        <van-checkbox catch:tap="noop" class="checkboxes-{{ index }}" name="{{ item.name }}" />
+      </van-cell>
+    </van-cell-group>
+  </van-checkbox-group>
+</view>

@@ -1,0 +1,9 @@
+/* components/model-selector-multiple/index.wxss */
+
+.value-class {
+  flex: none !important;
+}
+
+.multi-wrap {
+  margin-bottom: 15rpx;
+}

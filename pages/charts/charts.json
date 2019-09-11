@@ -1,7 +1,6 @@
 {
+  "pageOrientation": "landscape",
   "usingComponents": {
-    "van-tab": "vant-weapp/tab",
-    "van-tabs": "vant-weapp/tabs",
     "ec-canvas": "../../ec-canvas/ec-canvas"
   }
 }

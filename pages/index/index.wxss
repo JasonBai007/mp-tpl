@@ -1,18 +1,18 @@
 /**index.wxss**/
 
-.page-wrap {
+.item-wrap {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  height: 100vh;
+  padding: 8rpx;
 }
 
 .item {
   display: block;
-  background: #d4f7ed;
+  background: #fff;
   width: 30%;
-  height: 260rpx;
-  margin: 10rpx;
+  height: 250rpx;
+  margin: 8rpx;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -24,9 +24,14 @@
 .item text {
   font-size: 14px;
   display: block;
-  margin-top: 20rpx;
+  margin-top: 5rpx;
 }
 
 .inner-icon {
   font-size: 26px;
+  color: #1989fa;
+}
+
+.disabled-icon {
+  color: #abd4fd;
 }

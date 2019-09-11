@@ -1,98 +1,115 @@
 // pages/form/form.js
-const {
-  mockData
-} = require('../../mock/index.js')
-Page({
 
+var app = getApp()
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-    list2: mockData,
-    region: []
-  },  
-
-  onSingleChangeInterest(e) {
-    console.log(e.detail)
-  },
-
-  onRegionChange(e) {
-    console.log(e.detail)
-  },
-
-  onDateChange(e) {
-    console.log(e.detail)
-  },
-
-  onClickLeft() {
-    wx.switchTab({
-      url: '/pages/index/index'
-    })
-  },
-  onClickRight() {
-    wx.switchTab({
-      url: '/pages/index/index'
-    })
+    moduleName: '',
+    moduleId: '',
+    params: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.setData({
+      moduleName: options.moduleName,
+      moduleId: options.moduleId,
+    })
+    app.globalData.moduleId = options.moduleId
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-    // wx.request({
-    //   url: 'api/v1/getList',
-    //   success(res) {
-    //     console.log(res.data)
-    //   }
-    // })
+  // 查询
+  search() {
+    wx.showLoading({
+      title: '请求数据中...',
+    })
+    // 构建请求参数
+    let g = app.globalData
+    switch (this.data.moduleId) {
+      // 装车率
+      case 'loading':
+        this.setData({
+          params: {
+            carArr: g.carIdArr,
+            areaType: "all",
+            carType: "model",
+            assemblyType: g.assemblyType,
+            caryear: g.caryear,
+            city: [],
+            level: [],
+            province: [],
+            priceRange: [
+              [12, 18]
+            ]
+          }
+        })
+        this.fetchChartData('v2/assembly', this.data.params)
+        break;
+        // 装配率
+      case 'assembly':
+        this.setData({
+          params: {
+            carIdArr: g.carIdArr,
+            carNameArr: g.carNameArr,
+            carType: "model",
+            assemblyType: g.assemblyType,
+            caryear: g.caryear,
+            priceRange: [
+              [12, 18]
+            ]
+          }
+        })
+        this.fetchChartData('v2/assemblyRate', this.data.params)
+        break;
+        // 购车目的
+      case 'purpose':
+        this.setData({
+          params: {
+            carIdArr: g.carIdArr,
+            carNameArr: g.carNameArr
+          }
+        })
+        this.fetchChartData('v2/buyCarGoal', this.data.params)
+        break;
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
+  // 获取图表数据
+  fetchChartData(url, params) {
+    wx.cloud.callFunction({
+      name: 'fetchData',
+      data: {
+        methods: 'post',
+        url: url,
+        params: params,
+        isForm: false
+      }
+    }).then(res => {
+      wx.hideLoading()
+      app.globalData.chartData = res.result.data;
+      wx.navigateTo({
+        url: '../charts/charts'
+      })
+    }).catch(err => {
+      wx.hideLoading()
+      console.log(err)
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
+  // 顶部导航逻辑
+  onClickLeft() {
+    wx.navigateTo({
+      url: '../index/index'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
+  onClickRight() {
+    wx.navigateTo({
+      url: '../index/index'
+    })
   }
+
 })

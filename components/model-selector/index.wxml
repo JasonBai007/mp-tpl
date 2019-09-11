@@ -1,0 +1,8 @@
+<!--components/selector/index.wxml-->
+<!-- 使用示例： -->
+<!-- <single-selector title="年份" list="{{list1}}" bindsingleEvent="onSingleChangeYear"></single-selector> -->
+<view class='selector-wrap'>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{list}}" range-key="name">
+    <van-cell title="{{title}}" value="{{ rightValue }}" is-link />    
+  </picker>
+</view>

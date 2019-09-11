@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "model-selector": "../model-selector",
+    "model-selector-multiple": "../model-selector-multiple",
+    "assembly-selector-multiple": "../assembly-selector-multiple",
+    "years-selector-multiple": "../years-selector-multiple",
+    "single-selector": "../single-selector",
+    "region-selector": "../region-selector",
+    "date-selector": "../date-selector"
+  }
+}

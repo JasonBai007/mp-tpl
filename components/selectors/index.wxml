@@ -1,0 +1,12 @@
+<!--components/selectors/index.wxml-->
+<view>
+  <!-- <model-selector title="车型" bindmodelEvent="onModelChange"></model-selector> -->
+  <model-selector-multiple title="选择车型" wx:if="{{isShowObj.isShowMultiModel}}" />
+  <assembly-selector-multiple title="选择配置" wx:if="{{isShowObj.isShowMultiAssembly}}" />
+  <years-selector-multiple title="选择年代" wx:if="{{isShowObj.isShowMultiYears}}" />
+  <!-- <region-selector title="选择地域" bindregionEvent="onRegionChange" wx:if="{{isShowObj.isShowRegion}}" /> -->
+  <!-- <single-selector title="兴趣" list="{{list2}}" bindsingleEvent="onSingleChangeInterest"></single-selector> -->
+  <!-- <date-selector title="日期" binddateEvent="onDateChange"></date-selector> -->
+  <!-- <date-selector title="月份" type="month" binddateEvent="onDateChange"></date-selector> -->
+  <!-- <date-selector title="年份" type="year" binddateEvent="onDateChange"></date-selector> -->
+</view>
